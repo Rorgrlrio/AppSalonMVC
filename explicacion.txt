@@ -1,0 +1,8 @@
+La unica diferencia entre este "Deployment" y el proyecto "appsalon", que ya esta finalizado y tiene detalles nuestros,
+es que este proyecto tiene eliminado la carpeta de node modules
+tiene agregado el .sql de la base de datos, limpia
+Y tiene descargada la libreria de composer vlucas/phpdotenv, que nos permite:
+    1. Crear variables de entorno en el archivo .env en include
+    2. Para sustituirlas en el mysqli_connect del database.php
+    3. Y en app.php, usar la funcion createImmutable sobre el archivo .env (con __DIR__ le indicamos que lo busque en el mismo nivel de app.php)
+    4. Y un safeLoad para que nos tumbe el proyecto en caso de que halla error
